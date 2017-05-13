@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D10ED5B5-FBB1-497D-9D2F-455F29A19F29}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ImageExplorer</RootNamespace>
+    <AssemblyName>ImageExplorer</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CBlackWhiteExplorer.cs" />
+    <Compile Include="CBordersByColorForImage.cs" />
+    <Compile Include="CColorPartion.cs" />
+    <Compile Include="CDescriptionPartition.cs" />
+    <Compile Include="CImageSplitter.cs" />
+    <Compile Include="CompareColorBorderInImage.cs" />
+    <Compile Include="CProximityColor.cs" />
+    <Compile Include="FBordersByColorFoImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBordersByColorFoImage.Designer.cs">
+      <DependentUpon>FBordersByColorFoImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FColorBorderExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FColorBorderExplorer.Designer.cs">
+      <DependentUpon>FColorBorderExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FColorPartionExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FColorPartionExplorer.Designer.cs">
+      <DependentUpon>FColorPartionExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCompare2Image.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCompare2Image.Designer.cs">
+      <DependentUpon>FCompare2Image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCompare3Image.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCompare3Image.Designer.cs">
+      <DependentUpon>FCompare3Image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FImageExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FImageExplorer.Designer.cs">
+      <DependentUpon>FImageExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLookProximityAndProjection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLookProximityAndProjection.Designer.cs">
+      <DependentUpon>FLookProximityAndProjection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLookSeparatePart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLookSeparatePart.Designer.cs">
+      <DependentUpon>FLookSeparatePart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDivideBy3DDescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDivideBy3DDescription.Designer.cs">
+      <DependentUpon>FormDivideBy3DDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageListDataSet.cs">
+      <DependentUpon>ImageListDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImageListDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImageListDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FBordersByColorFoImage.resx">
+      <DependentUpon>FBordersByColorFoImage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FColorBorderExplorer.resx">
+      <DependentUpon>FColorBorderExplorer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FColorPartionExplorer.resx">
+      <DependentUpon>FColorPartionExplorer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCompare2Image.resx">
+      <DependentUpon>FCompare2Image.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCompare3Image.resx">
+      <DependentUpon>FCompare3Image.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FImageExplorer.resx">
+      <DependentUpon>FImageExplorer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLookProximityAndProjection.resx">
+      <DependentUpon>FLookProximityAndProjection.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLookSeparatePart.resx">
+      <DependentUpon>FLookSeparatePart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDivideBy3DDescription.resx">
+      <DependentUpon>FormDivideBy3DDescription.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ImageListDataSet.xsc">
+      <DependentUpon>ImageListDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ImageListDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ImageListDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ImageListDataSet.xss">
+      <DependentUpon>ImageListDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colour_16.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FillRightHS.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colour_wheel_16.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DisplayInColorHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\merge_cells16.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_x16.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus16.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show16.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\balance16.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\active_network_connection16.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BMP.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Control_ColorDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\large_icons16.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indexes16.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
